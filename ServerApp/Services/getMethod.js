@@ -13,5 +13,4 @@ const getMethod = async () => {
         }
     })
 }
-getMethod()
 module.exports = getMethod;

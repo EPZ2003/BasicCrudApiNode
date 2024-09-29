@@ -8,7 +8,6 @@ const deleteMethod = async (id) => {
             const filePath = '../DB/database.json';
             const file = await fsPromise.readFile(filePath,{encoding:'utf-8'});
             const fileObj = JSON.parse(file);
-
             //Delete the item
             console.log(id)
             delete fileObj[id];
