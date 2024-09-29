@@ -25,7 +25,5 @@ const checkIdInJson = async (idNonFormated) => {
             reject();
         }
     })
-
-
 }
 module.exports = checkIdInJson
