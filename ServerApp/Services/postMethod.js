@@ -18,7 +18,7 @@ const postMethod = async (id,name) => {
             reject();
         }
     }).then(
-            () => {addUserDb(id,name),fsPromise.writeFile(filePath,file);console.log("Item saved")},
+            () => {fsPromise.writeFile(filePath,file);addUserDb(id,name);console.log("Item saved")},
             () => {console.error("We can't save the element because of the id or the name that are not in the conform format");}
         )
 }
