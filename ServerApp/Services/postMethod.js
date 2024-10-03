@@ -1,5 +1,5 @@
 const fsPromise = require('node:fs/promises')
-
+const addUserDb = require('../UsefullFunctions/addUserDB')
 
 const postMethod = async (id,name) => {
 
@@ -18,7 +18,7 @@ const postMethod = async (id,name) => {
             reject();
         }
     }).then(
-            () => {fsPromise.writeFile(filePath,file); console.log("Item saved")},
+            () => {addUserDb(id,name),fsPromise.writeFile(filePath,file);console.log("Item saved")},
             () => {console.error("We can't save the element because of the id or the name that are not in the conform format");}
         )
 }
